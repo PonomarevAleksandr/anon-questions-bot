@@ -1,0 +1,6 @@
+welcome = 'url'
+new_message = 'url'
+sended = 'url'
+answer_sended = 'url'
+send_message_photo = 'url'
+no_photo = 'url'

@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: dockerfile.bot
+
+  mongo:
+    image: mongo:4.4
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: dev
+      MONGO_INITDB_ROOT_PASSWORD: 6ec30fa38ebdfdda72dc88eaec91e94d
+      MONGO_INITDB_DATABASE: admin
+    volumes:
+      - ./docker/mongo/mongodump:/mongodump
+      - ./docker/mongo/data:/data/db
+    ports:
+      - 27052:27017
+
+
